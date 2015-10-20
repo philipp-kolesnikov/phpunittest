@@ -8,5 +8,10 @@
             "name": "Philipp Kolesnikov",
             "email": "kolesnikov@farpost.com"
         }
-    ]
+    ],
+    "config": {
+        "platform": {
+            "php": "5.6.7"
+        }
+    }
 }

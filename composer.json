@@ -1,0 +1,12 @@
+{
+    "name": "philipp/phpunittest",
+    "require": {
+        "phpunit/phpunit": "5.*"
+    },
+    "authors": [
+        {
+            "name": "Philipp Kolesnikov",
+            "email": "kolesnikov@farpost.com"
+        }
+    ]
+}

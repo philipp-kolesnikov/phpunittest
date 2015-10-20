@@ -1,0 +1,21 @@
+<project name="phpunittest" default="build">
+
+	<target name="composer">
+		<exec executable="composer" failonerror="true">
+			<arg line="update"/>
+		</exec>
+	</target>
+
+	<target name="build" depends="composer">
+		<parallel>
+			<exec executable="php" failonerror="false">
+				<arg line="vendor/phpunit/phpunit/phpunit --teamcity ./tests/Parallel1Test.php"/>
+				<arg value="tests/Parallel1Test.php"/>
+			</exec>
+			<exec executable="php" failonerror="false">
+				<arg line="vendor/phpunit/phpunit/phpunit --teamcity ./tests/Parallel2Test.php"/>
+				<arg value="tests/Parallel1Test.php"/>
+			</exec>
+		</parallel>
+	</target>
+</project>

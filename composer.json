@@ -1,7 +1,13 @@
 {
     "name": "philipp/phpunittest",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/philipp-kolesnikov/phpunit"
+        }
+    ],
     "require": {
-        "phpunit/phpunit": "5.*"
+        "phpunit/phpunit": "5.0.x-dev"
     },
     "authors": [
         {

@@ -6,15 +6,16 @@
 		</exec>
 	</target>
 
-	<target name="build" depends="composer">
+	<target name="build">
 		<parallel>
 			<exec executable="php" failonerror="false">
 				<arg line="vendor/phpunit/phpunit/phpunit --teamcity ./tests/Parallel1Test.php"/>
-				<arg value="tests/Parallel1Test.php"/>
 			</exec>
 			<exec executable="php" failonerror="false">
 				<arg line="vendor/phpunit/phpunit/phpunit --teamcity ./tests/Parallel2Test.php"/>
-				<arg value="tests/Parallel1Test.php"/>
+			</exec>
+			<exec executable="php" failonerror="false">
+				<arg line="vendor/phpunit/phpunit/phpunit --teamcity ./tests/Parallel3Test.php"/>
 			</exec>
 		</parallel>
 	</target>

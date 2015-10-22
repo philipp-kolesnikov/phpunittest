@@ -2,7 +2,7 @@
 
 class ParallelTest3 extends PHPUnit_Framework_TestCase {
 
-	public function testProvider()
+	public function myProvider()
 	{
 		return array(
 			array(1),
@@ -12,7 +12,7 @@ class ParallelTest3 extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 *  @dataProvider testProvider
+	 *  @dataProvider myProvider
 	 */
 	public function testFirst($a) {
 		print(__CLASS__."::".$this->getName()." pid is ".getmypid());

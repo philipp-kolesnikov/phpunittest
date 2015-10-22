@@ -6,6 +6,12 @@
 		</exec>
 	</target>
 
+	<target name="composer-win">
+		<exec executable="cmd" failonerror="true">
+			<arg line="/c composer.cmd update"/>
+		</exec>
+	</target>
+
 	<target name="build">
 		<parallel>
 			<exec executable="php" failonerror="false">
